@@ -1,6 +1,7 @@
 package setUp;
 
 import io.restassured.RestAssured;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.FileInputStream;
@@ -28,5 +29,10 @@ public class BaseTest {
 
         RestAssured.baseURI = config.getProperty("baseURI");
         RestAssured.basePath = config.getProperty("basePath");
+     }
+
+     @AfterSuite
+     public void tearDown(){
+
      }
 }
