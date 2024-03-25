@@ -1,7 +1,6 @@
 package setUp;
 
 import io.restassured.RestAssured;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
 import java.io.FileInputStream;
