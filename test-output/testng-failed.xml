@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="customListeners.Listners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="/Users/adityapanwar/IdeaProjects/petStoreTesting(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testCases.testCase3">
+        <methods>
+          <include name="userReg"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.testCase3 -->
+      <class name="testCases1.testCase3">
+        <methods>
+          <include name="userReg"/>
+        </methods>
+      </class> <!-- testCases1.testCase3 -->
+      <class name="testCases.petTests">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="findPetByStatus"/>
+        </methods>
+      </class> <!-- testCases.petTests -->
+      <class name="testCases1.petTests">
+        <methods>
+          <include name="findPetByStatus"/>
+        </methods>
+      </class> <!-- testCases1.petTests -->
+    </classes>
+  </test> <!-- /Users/adityapanwar/IdeaProjects/petStoreTesting(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

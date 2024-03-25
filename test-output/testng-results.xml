@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="2" failed="4" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-23T14:15:41 EET" name="All Test Suite" finished-at="2024-03-23T14:15:41 EET" duration-ms="29">
+    <groups>
+    </groups>
+    <test started-at="2024-03-23T14:15:41 EET" name="/Users/adityapanwar/IdeaProjects/petStoreTesting" finished-at="2024-03-23T14:15:41 EET" duration-ms="29">
+      <class name="testCases.petTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.petTests@c86b9e3]" started-at="2024-03-23T14:15:41 EET" name="setUp" finished-at="2024-03-23T14:15:41 EET" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="findPetByStatus()[pri:0, instance:testCases.petTests@c86b9e3]" started-at="2024-03-23T14:15:41 EET" name="findPetByStatus" finished-at="2024-03-23T14:15:41 EET" duration-ms="5" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [Expected] but found [Actual],
+expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Expected] but found [Actual],
+expected [false] but found [true]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at testCases.petTests.findPetByStatus(petTests.java:18)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findPetByStatus -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.petTests@c86b9e3]" started-at="2024-03-23T14:15:41 EET" name="tearDown" finished-at="2024-03-23T14:15:41 EET" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.petTests -->
+      <class name="testCases.testCase3">
+        <test-method signature="userReg()[pri:1, instance:testCases.testCase3@1dac5ef]" started-at="2024-03-23T14:15:41 EET" name="userReg" finished-at="2024-03-23T14:15:41 EET" duration-ms="1" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[User not registered]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: User not registered
+at org.testng.Assert.fail(Assert.java:111)
+at testCases.testCase3.userReg(testCase3.java:11)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userReg -->
+        <test-method signature="loginUser()[pri:2, instance:testCases.testCase3@1dac5ef]" started-at="2024-03-23T14:15:41 EET" name="loginUser" finished-at="2024-03-23T14:15:41 EET" depends-on-methods="testCases.testCase3.userReg" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUser -->
+      </class> <!-- testCases.testCase3 -->
+      <class name="testCases1.petTests">
+        <test-method signature="findPetByStatus()[pri:0, instance:testCases1.petTests@5c90e579]" started-at="2024-03-23T14:15:41 EET" name="findPetByStatus" finished-at="2024-03-23T14:15:41 EET" duration-ms="0" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+expected [Expected] but found [Actual],
+expected [false] but found [true]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+expected [Expected] but found [Actual],
+expected [false] but found [true]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at testCases1.petTests.findPetByStatus(petTests.java:18)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- findPetByStatus -->
+      </class> <!-- testCases1.petTests -->
+      <class name="testCases1.testCase3">
+        <test-method signature="userReg()[pri:1, instance:testCases1.testCase3@58ea606c]" started-at="2024-03-23T14:15:41 EET" name="userReg" finished-at="2024-03-23T14:15:41 EET" duration-ms="0" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[User not registered]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: User not registered
+at org.testng.Assert.fail(Assert.java:111)
+at testCases1.testCase3.userReg(testCase3.java:11)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:228)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:961)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:201)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:819)
+at org.testng.TestRunner.run(TestRunner.java:619)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- userReg -->
+        <test-method signature="loginUser()[pri:2, instance:testCases1.testCase3@58ea606c]" started-at="2024-03-23T14:15:41 EET" name="loginUser" finished-at="2024-03-23T14:15:41 EET" depends-on-methods="testCases1.testCase3.userReg" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUser -->
+      </class> <!-- testCases1.testCase3 -->
+    </test> <!-- /Users/adityapanwar/IdeaProjects/petStoreTesting -->
+  </suite> <!-- All Test Suite -->
+</testng-results>
