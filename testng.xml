@@ -1,2 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="/Users/adityapanwar/IdeaProjects/petStoreTesting/SwaggerPetStore"><classes><class name="tests.PetTests"><methods><include name="createPetTest"/><include name="findPetByStatus"/><include name="updatePet"/><include name="updatePetByPetId"/><include name="deletePet"/><include name="deletingSameUser"/><include name="uploadPetPhoto"/></methods></class><class name="tests.StoreTests"><methods><include name="createStoreOrder"/><include name="getOrderByOrderId"/><include name="getPetsInventory"/><include name="deletePetOrder"/><include name="createIncorrectStoreOrder"/></methods></class><class name="tests.UserTests"><methods><include name="createUserTest"/><include name="findUserByUserNameTest"/><include name="testUpdateUserByName"/><include name="testDeleteUserByName"/></methods></class></classes></test></suite>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="customListeners.ExtentListeners"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="SwaggerPetStore">
+        <classes>
+            <class name="customListeners.ExtentListeners">
+                <methods>
+                    <include name="onTestSuccess"/>
+                </methods>
+            </class>
+            <class name="tests.PetTests">
+                <methods>
+                    <include name="createPetTest"/>
+                    <include name="findPetByStatus"/>
+                    <include name="updatePet"/>
+                    <include name="updatePetByPetId"/>
+                    <include name="deletePet"/>
+                    <include name="deletingSameUser"/>
+                    <include name="uploadPetPhoto"/>
+                </methods>
+            </class>
+            <class name="tests.StoreTests">
+                <methods>
+                    <include name="createStoreOrder"/>
+                    <include name="getOrderByOrderId"/>
+                    <include name="getPetsInventory"/>
+                    <include name="deletePetOrder"/>
+                    <include name="createIncorrectStoreOrder"/>
+                </methods>
+            </class>
+            <class name="tests.UserTests">
+                <methods>
+                    <include name="createUserTest"/>
+                    <include name="findUserByUserNameTest"/>
+                    <include name="testUpdateUserByName"/>
+                    <include name="testDeleteUserByName"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

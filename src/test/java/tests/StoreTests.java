@@ -97,7 +97,7 @@ public class StoreTests extends BaseTest {
 
         //Assertions on the delete store orderEndpoint
         Assertions.statusCodeAssertion(200, deletePetOrderResponse);
-        Assertions.deleteStoreOrderAssertions(deletePetOrderResponse,this.storePayload, config.getProperty("deletePetOrderResponseSchema"));
+        Assertions.deleteStoreOrderAssertions(deletePetOrderResponse, this.storePayload, config.getProperty("deletePetOrderResponseSchema"));
     }
 
 

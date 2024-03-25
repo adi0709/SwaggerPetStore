@@ -5,7 +5,6 @@ import endpoints.PetEndpoints;
 import enums.PetStatus;
 import io.restassured.response.Response;
 import net.datafaker.Faker;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import payload.petPayload.PetData;
@@ -17,6 +16,7 @@ import java.io.File;
 
 
 public class PetTests extends BaseTest {
+
 
     Faker faker;
     PetData petPayload;
@@ -38,7 +38,7 @@ public class PetTests extends BaseTest {
                 faker.number().positive(),
                 faker.text().text(),
                 petCategory,
-                (PetStatus.AVAILABLE).toString()
+                PetStatus.AVAILABLE
         );
         petPayload.setUrls(faker.internet().url(), faker.internet().url(), faker.internet().url());
         petPayload.setTag(petTag1, petTag2);
@@ -46,7 +46,7 @@ public class PetTests extends BaseTest {
 
         //Creating the data for update Pet endpoint
         String updateName = faker.animal().name();
-        String updateStatus = "SOLD";
+        PetStatus updateStatus = PetStatus.SOLD;
         updatedPetResponse = new PetData(this.petPayload.getId(), updateName, this.petPayload.getCategory(), updateStatus);
         PetDataTag updatePetTag1 = new PetDataTag(faker.number().positive(), faker.text().text());
         PetDataTag updatePetTag2 = new PetDataTag(faker.number().positive(), faker.text().text());
@@ -82,12 +82,22 @@ public class PetTests extends BaseTest {
     public void findPetByStatus() {
 
         //Find pet by status tests
-        Response getPetByStatusResponse = PetEndpoints.getPetByStatus(PetStatus.AVAILABLE, null, null);
-        getPetByStatusResponse.then().log().all();
+        //for loop to get the values of petStatus
+        for (PetStatus status : PetStatus.values()) {
+            //for loop for the iterations
+            for (int i = 0; i < PetStatus.values().length; i++) {
+                petPayload.setStatus(status);
+                //Created Pet for each status type
+                Response createPetResponse = PetEndpoints.createPet(this.petPayload);
+            }
 
-        //Adding Assertion to confirm all the provided haven the same status as provided in test
-        Assertions.statusCodeAssertion(200, getPetByStatusResponse);
-        Assertions.getPetsByStatusAssertions(getPetByStatusResponse, config.getProperty("getPetByStatusResponseSchema"));
+            Response getPetByStatusResponse = PetEndpoints.getPetByStatus(status, null, null);
+            getPetByStatusResponse.then().log().all();
+
+            //Adding Assertion to confirm all the provided haven the same status as provided in test
+            Assertions.statusCodeAssertion(200, getPetByStatusResponse);
+            Assertions.getPetsByStatusAssertions(getPetByStatusResponse, config.getProperty("getPetByStatusResponseSchema"), status);
+        }
     }
 
     @Test
@@ -112,6 +122,7 @@ public class PetTests extends BaseTest {
         Assertions.updatePetByPetIdAssertions(updatePetByPetIdResponse, this.petPayload, config.getProperty("updatePetByPetIdResponseSchema"));
 
     }
+
 
     @Test
     public void deletePet() {
@@ -152,5 +163,3 @@ public class PetTests extends BaseTest {
     }
 
 }
-
-
