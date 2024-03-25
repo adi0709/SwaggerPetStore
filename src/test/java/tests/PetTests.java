@@ -87,7 +87,7 @@ public class PetTests extends BaseTest {
             //for loop for the iterations
             for (int i = 0; i < PetStatus.values().length; i++) {
                 petPayload.setStatus(status);
-                //Created Pet for each status type
+                //Created Pet for each status type, Total of 9 pets will be created due to double loop
                 Response createPetResponse = PetEndpoints.createPet(this.petPayload);
             }
 
