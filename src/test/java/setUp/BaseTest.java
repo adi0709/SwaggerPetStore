@@ -30,9 +30,4 @@ public class BaseTest {
         RestAssured.baseURI = config.getProperty("baseURI");
         RestAssured.basePath = config.getProperty("basePath");
      }
-
-     @AfterSuite
-     public void tearDown(){
-
-     }
 }
