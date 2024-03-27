@@ -1,12 +1,5 @@
 package payload.petPayload;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
-import lombok.Setter;
-import org.testng.ITestResult;
-
-@Setter
-@Getter
 public class PetDataCategory {
     public PetDataCategory(Integer id, String name) {
         this.id = id;
@@ -14,5 +7,22 @@ public class PetDataCategory {
     }
 
     private Integer id;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     private String name;
 }
